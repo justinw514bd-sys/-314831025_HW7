@@ -16,13 +16,20 @@
 ```bash
 pip install -r requirements.txt
 
-### 2.設定環境變數與 API 金鑰
-本專案依賴 Google AI Studio 與 Hugging Face 的 API 服務。
+# Story LLM (填入 Google AI Studio 的金鑰，如 AQ. 開頭)
+STORY_API_KEY=你的_Google_API_Key
+STORY_BASE_URL=https://generativelanguage.googleapis.com/v1beta/openai/
+STORY_MODEL=gemini-2.5-flash
 
-在專案根目錄下，找到 .env.example 檔案，將其複製並重新命名為 .env。
+# Prompt LLM (同上)
+PROMPT_API_KEY=你的_Google_API_Key
+PROMPT_BASE_URL=https://generativelanguage.googleapis.com/v1beta/openai/
+PROMPT_MODEL=gemini-2.5-flash
 
-用文字編輯器打開 .env，填入你專屬的 API 金鑰
+# HuggingFace (填入你的 HF Token)
+HF_TOKEN=你的_HuggingFace_Token
 
-### 3.啟動系統
-設定完成後，在終端機輸入以下指令啟動 Gradio 伺服器：
+# SDXL 模型設定 (維持預設即可)
+SD_MODEL=stabilityai/stable-diffusion-xl-base-1.0
+
 python app.py
